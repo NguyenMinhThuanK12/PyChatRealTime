@@ -1,0 +1,15 @@
+#messageArea > .message {
+    margin-bottom: 5px;
+}
+
+#messageArea .message.own {
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: right;
+}
+
+#messageArea .message.other {
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: left;
+}

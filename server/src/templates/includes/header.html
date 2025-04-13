@@ -1,0 +1,10 @@
+<div id="headerContainer">
+    {% if current_user.is_authenticated %}
+    <span>Xin chào {{ current_user.username }}</span>
+    <button id="logoutButton" type="button" class="btn btn-primary">Đăng xuất</button>
+    {% else %}
+    <span>  Chưa đăng nhập</span>
+    <a href="/login" class="btn btn-primary">Đăng nhập</a>
+
+    {% endif %}
+</div>

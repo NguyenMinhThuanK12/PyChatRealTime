@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@layer base {
+	@font-face {
+		font-family: "Inter";
+		src: url('./font/Inter-VariableFont_slnt\,wght.ttf');
+	}
+
+	@font-face {
+		font-family: "Oleo Script Regular";
+		src: url('./font/OleoScript-Regular.ttf');
+	}
+
+	@font-face {
+		font-family: "Oleo Script Bold";
+		src: url('./font/OleoScript-Bold.ttf');
+	}
+}
+
+@layer utilities {
+	.scrollChatConversions::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	.scrollChatConversions::-webkit-scrollbar-track {
+		/* border-radius: 9999; */
+		background: black;
+	}
+
+	.scrollChatConversions::-webkit-scrollbar-thumb {
+		background: #00B894;
+		border-radius: 100vh;
+		border: 3px solid #00B894;
+	}
+}
+
+.active {
+	@apply bg-primary
+}
+
+.active .activeIcon {
+	@apply text-white dark:text-white
+}

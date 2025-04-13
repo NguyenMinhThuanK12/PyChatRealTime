@@ -1,0 +1,38 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Rooms</h3>
+            <ul id="roomList" class="list-group">
+                {% for username, channel_id in channels %}
+                <li class="list-group-item">
+                    <a href="/r/{{channel_id}}">{{username}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <h3>Messages</h3>
+            <div id="messageArea" class="border p-3 mb-3" style="height: 300px; overflow-y: auto;">
+                {% for message in messages %}
+                {% if message.user_id == current_user.id %}
+                <div class="message own">{{message.message}}</div>
+                {% else %}
+                <div class="message other">{{message.message}}</div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="messageInput" placeholder="Type your message...">
+                <button class="btn btn-primary" id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

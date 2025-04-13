@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container" id="registerContainer">
+    <h2 class="text-center mt-4 mb-4" id="registerTitle">Register</h2>
+    <form id="loginForm" class="p-4 border rounded shadow-sm">
+        <div class="mb-3">
+            <label for='inputEmail'>Email:</label>
+            <input id='inputEmail' type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for='inputUsername'>Username:</label>
+            <input id='inputUsername' type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for='inputPassword'>Password:</label>
+            <input id='inputPassword' type="password" class="form-control" required>
+        </div>
+        <button id='registerButton' type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+    <div class="text-center mt-3" id="loginLink">
+        <p>Already have an account? <a href="login" id="loginButton">Login</a></p>
+    </div>
+</div>
+{% endblock %}
+
